@@ -1,0 +1,44 @@
+
+
+nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav div {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav label {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  
+  .inline-list {
+    list-style-type: none;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  
+  .inline-list li {
+    display: inline-block;
+    margin-right: 10px;
+    margin: 20px;
+  }
+  
+
+  button{
+    width: 100px;
+    height: 39px;
+    text-size-adjust: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: rgb(213, 13, 13);
+    color: white;
+
+  }
+
+ 
+  

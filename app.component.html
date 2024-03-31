@@ -1,0 +1,22 @@
+<nav>
+  <div>
+    <label for="searchTerm">Search Movie:</label>
+    <input type="text" id="searchTerm" [(ngModel)]="searchTerm" placeholder="Search movies..." (keyup.enter)="search()" />
+  </div>
+</nav>
+
+<div *ngIf="searchResults.length > 0">
+  <ul class="inline-list">
+    <li *ngFor="let result of searchResults">
+      <img [src]="getImageUrl(result.poster_path)" alt="Movie Poster" width="250" height="150" (click)="showMovieDetails(result)" />
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedMovie">
+  <h2>{{ selectedMovie.title }}</h2>
+  <p>Overview: {{ selectedMovie.overview }}</p>
+  <p>Release Date: {{ selectedMovie.release_date }}</p>
+  <img [src]="getImageUrl(selectedMovie.poster_path)" alt="Movie Poster" width="250" height="150" />
+  <button (click)="clearMovieDetails()">Close</button>
+</div>
